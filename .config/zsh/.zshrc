@@ -13,3 +13,7 @@ export ZSH="$ZDOTDIR/.oh-my-zsh"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+# auto suggestions
+
+source $ZDOTDIR/.zsh-autosuggestions/zsh-autosuggestions.zsh
