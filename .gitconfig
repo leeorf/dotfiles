@@ -1,0 +1,10 @@
+[user]
+	name = Leonardo Rodrigues
+	email = leo.rf.dev@gmail.com
+
+[push]
+	default = current
+	autoSetupRemote = true
+	
+[remote "origin"]
+	tagopt = --tags
