@@ -51,6 +51,11 @@ inoremap <Down> <ESC>:echoe "Use j"<CR>
 "Custom keybindings.
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>p :CtrlP<CR>
 
 "NERDTree configs.
 let NERDTreeShowHidden=1
+
+"ctrlpvim configs.
+let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_show_hidden = 1
