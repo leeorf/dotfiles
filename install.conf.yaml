@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.shell: shell
+    ~/.bash: bash
+    ~/.bashrc:
+      path: bash/bashrc
+      force: true
+    ~/.gitconfig: git/gitconfig
+    ~/.vim: vim
+    ~/.tmux.conf: tmux/tmux.conf
+
+- create:
+    - ~/Developer/projects
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
