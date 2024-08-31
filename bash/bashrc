@@ -1,0 +1,6 @@
+source ~/.shell/aliases.sh
+source ~/.shell/git-prompt.sh
+
+source ~/.bash/git-completion.bash
+source ~/.bash/prompt.bash
+source ~/.bash/settings.bash
