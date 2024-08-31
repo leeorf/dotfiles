@@ -10,6 +10,9 @@
     ~/.bashrc:
       path: bash/bashrc
       force: true
+    ~/.bash_profile:
+      path: bash/bash_profile
+      force: true
     ~/.gitconfig: git/gitconfig
     ~/.vim: vim
     ~/.tmux.conf: tmux/tmux.conf
