@@ -1,0 +1,17 @@
+[alias]
+  who = shortlog
+  w = who
+  graph = log --all --graph --oneline #Graph
+  g = graph
+  fulldiff = log -p
+  fd = fulldiff
+
+[user]
+	name = Leonardo Rodrigues Ferreira
+	email = leo.rf.developer@gmail.com
+
+[core]
+  editor = vim
+
+[merge]
+  tool = vimdiff
