@@ -1,0 +1,90 @@
+"Basic settings.
+set colorcolumn=80
+set ruler
+set textwidth=72
+set autoindent
+set smartindent
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+
+" Insert space chars whenever the tab key is pressed
+set expandtab
+
+" Change leader. This is useful to write custom key bindings.
+let mapleader = " "
+nnoremap <SPACE> <Nop>
+
+" Turn on syntax highlighting.
+syntax on
+
+" Disable the default Vim startup message.
+set shortmess+=I
+
+" Show line numbers and enable relative line numbering mode.
+" Useful to jump up or down to a particular line.
+set relativenumber
+set number
+
+" Always show status line at the bottom.
+set laststatus=2
+
+" Makes search case-insensitive when all characters in the string
+" being searched are lowercase. However, the search becomes case-sensitive if
+" it contains any capital letters.
+set ignorecase
+set smartcase
+
+" Enable searching as you type, rather than waiting until you press enter.
+set incsearch
+
+" Display keystrokes in statusline as you enter them.
+set showcmd
+
+" Disable audible bell.
+set noerrorbells visualbell t_vb=
+
+" Unbind some useless/annoying default key bindings.
+nmap Q <Nop>
+
+" Prevent bad habits that does not adhere to Vim philosophy.
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+inoremap <Left> <ESC>:echoe "Use h"<CR>
+inoremap <Right> <ESC>:echoe "Use l"<CR>
+inoremap <Up> <ESC>:echoe "Use k"<CR>
+inoremap <Down> <ESC>:echoe "Use j"<CR>
+
+"Custom keybindings.
+nnoremap <leader>r :so $MYVIMRC<CR>
+noremap <leader><Tab><Tab> :set invlist<CR>
+inoremap <S-Tab> <C-d>
+vnoremap <S-Tab> <
+vnoremap <Tab> >
+
+"Plugins keybindings
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>p :CtrlP<CR>
+
+"Debug invisible chars
+set listchars=tab:>>,space:_
+
+"NERDTree configs.
+let NERDTreeShowHidden=1
+
+"ctrlpvim configs.
+let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_show_hidden = 1
+
+"vim-fugitive configs
+function FugitiveToggle() abort
+  try
+    exe filter(getwininfo(), "get(v:val['variables'], 'fugitive_status', v:false) != v:false")[0].winnr .. "wincmd c"
+  catch /E684/
+    vertical Git
+    vertical resize 80
+  endtry
+endfunction
+nnoremap <leader>g <cmd>call FugitiveToggle()<CR>
