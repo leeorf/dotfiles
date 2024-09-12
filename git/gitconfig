@@ -1,10 +1,16 @@
 [alias]
-  who = shortlog
-  w = who
-  graph = log --all --graph --oneline #Graph
-  g = graph
-  fulldiff = log -p
-  fd = fulldiff
+  g = log --all --graph --oneline
+  s = status --short
+  d = difftool
+  ds = difftool --staged
+  c = commit --verbose
+  ca = commit --verbose --all 
+  l = log --patch --stat
+  unstage = restore --staged --
+  discard = restore --
+  last = log --patch --stat -1 HEAD
+  originpush = ! "git push -u origin $(git branch --show-current)"
+  
 
 [user]
 	name = Leonardo Rodrigues Ferreira
