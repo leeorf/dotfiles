@@ -17,6 +17,9 @@
     ~/.gitignore_global: git/gitignore_global
     ~/.vim: vim
     ~/.tmux.conf: tmux/tmux.conf
+    ~/.asdf:
+      path: asdf
+      force: true
 
 - create:
     - ~/Developer/projects

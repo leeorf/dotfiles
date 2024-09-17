@@ -18,3 +18,7 @@
   path = vim/pack/vendor/start/vim-airline
   url = git@github.com:vim-airline/vim-airline.git
   ignore = dirty
+[submodule "asdf"]
+	path = asdf
+	url = git@github.com:asdf-vm/asdf.git
+  ignore = dirty
