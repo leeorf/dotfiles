@@ -8,4 +8,6 @@ set -o vi
 export EDITOR=vim
 
 # Load brew if present
-eval "$(/opt/homebrew/bin/brew shellenv)" 2>/dev/null
+if [[ -f "/opt/homebrew/bin/brew" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)" 2>/dev/null
+fi
