@@ -1,6 +1,12 @@
 source ~/.shell/aliases.sh
 source ~/.shell/git-prompt.sh
 
+# Allow local customizations in the ~/.bashrc_local_before file
+if [ -f ~/.bashrc_local_before ]; then
+    source ~/.bashrc_local_before
+fi
+
+
 source ~/.bash/git-completion.bash
 source ~/.bash/prompt.bash
 source ~/.bash/settings.bash
