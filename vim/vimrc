@@ -55,8 +55,9 @@ vnoremap <S-Tab> <
 vnoremap <Tab> >
 
 "Plugins keybindings
-nnoremap <leader>t :NERDTreeToggle<CR>
-nnoremap <leader>p :CtrlP<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>sf :CtrlP<CR>
+nnoremap <leader>sr :CtrlPMRU<CR>
 
 "Debug invisible chars
 set listchars=tab:>>,space:_
@@ -67,6 +68,7 @@ let NERDTreeShowHidden=1
 "ctrlpvim configs.
 let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 "vim-fugitive configs
 function FugitiveToggle() abort
