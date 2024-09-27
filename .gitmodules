@@ -8,7 +8,7 @@
   ignore = dirty
 [submodule "vim/pack/vendor/start/ctrlp.vim"]
   path = vim/pack/vendor/start/ctrlp.vim
-  url = git@github.com:kien/ctrlp.vim.git
+  url = git@github.com:ctrlpvim/ctrlp.vim.git
   ignore = dirty
 [submodule "vim/pack/vendor/start/vim-fugitive"]
   path = vim/pack/vendor/start/vim-fugitive
